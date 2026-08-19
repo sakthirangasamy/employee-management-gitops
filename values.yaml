@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: localhost:8082/employee-management
+  tag: "17"
+  pullPolicy: IfNotPresent
+
+containerPort: 8080
+
+db:
+  host: "mysql-service"
+  port: 3306
+  database: "employee_management_system"
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 8080
+  nodePort: 30631
