@@ -1,4 +1,4 @@
-replicaCount: 3
+replicaCount: 
 
 image:
   repository: localhost:8082/employee-management
